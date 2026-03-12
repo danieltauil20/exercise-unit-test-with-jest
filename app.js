@@ -1,8 +1,8 @@
-// One euro is:
-let oneEuroIs = {
-    "JPY": 156.5,
-    "USD": 1.07,
-    "GBP": 0.87,
+// Conversion rates: 1 Euro equals
+const oneEuroIs = {
+    JPY: 156.5,
+    USD: 1.07,
+    GBP: 0.87
 };
 
 // Euro → Dollar
@@ -13,13 +13,15 @@ const fromEuroToDollar = (euros) => {
 // Dollar → Yen
 const fromDollarToYen = (dollars) => {
     const euros = dollars / oneEuroIs.USD;
-    return euros * oneEuroIs.JPY;
+    const yen = euros * oneEuroIs.JPY;
+    return yen;
 };
 
 // Yen → Pound
 const fromYenToPound = (yen) => {
     const euros = yen / oneEuroIs.JPY;
-    return euros * oneEuroIs.GBP;
+    const pounds = euros * oneEuroIs.GBP;
+    return pounds;
 };
 
 module.exports = {
